@@ -20,13 +20,15 @@ URL = [URL OF YOUR FORM] (make sure that it ends with viewform) <br>
 RESPONSES = [NUMBER OF RESPONSES] <br>
 TIME = [TIME IN MINUTES OVER WHICH THE SUBMISSIONS WILL BE DONE] (0 submits one after another)<br>
 
-Q#: [RANDOM OR SEQUENTIAL] <br>
-Responses
+Q#: [RANDOM OR SEQUENTIAL OR PROBABILISTIC] <br>
+Responses[;PROBABILITY -- IF PROBABILISTIC]
 
-Q#: [RANDOM OR SEQUENTIAL] <br>
-Responses
+Q#: [RANDOM OR SEQUENTIAL OR PROBABILISTIC] <br>
+Responses[;PROBABILITY -- IF PROBABILISTIC]
 
 ...
+
+An example is included in config.txt
 
 ## Running
 Run the program by executing the .pyc file
