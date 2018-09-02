@@ -15,10 +15,10 @@ Response 3
 Response 4
 Response 5
 
-Q3: RANDOM
-Test 1
-Test 2
-Test 3
-Test 4
+Q3: PROBABILISTIC
+Test 1;20
+Test 2;20
+Test 3;50
+Test 4;10
 
 

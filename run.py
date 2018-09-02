@@ -1,6 +1,7 @@
 import time
 import random
 import requests
+import numpy
 
 
 
@@ -10,6 +11,7 @@ lol = open("config.txt",'r')
 
 data = []
 options = []
+prob = []
 
 ind = -1
 for e in lol:
@@ -27,14 +29,25 @@ for e in lol:
 		numQuestions = int(e.replace("NUM QUESTIONS = ","").strip())
 		for i in range(numQuestions):
 			data.append([])
+			prob.append([])
 	elif("Q" in e and ":" in e):
 		ind += 1
 		options.append(e[e.index(":")::].strip())
 	else:
-		data[ind].append(e.replace(" ","+"))
 		option = options[-1] #not used yet
+		if("PROBABILISTIC" in option):
+			temp = e.split(";")
+			data[ind].append(temp[0].replace(" ","+"))
+			probC = int(temp[1])/100
+			prob[ind].append(probC)
+		else:
+			data[ind].append(e.replace(" ","+"))
+		
+			
 
 	
+
+print(prob)
 
 read = requests.get(URL)
 
@@ -78,6 +91,9 @@ def makeAns(respNum):
 	for i in range(numQuestions):
 		if("SEQUENCE" in options[i]):
 			ans.append(data[i][respNum%len(data[i])])
+		elif("PROBABILISTIC" in options[i]):
+			randInd = numpy.random.choice(numpy.arange(0, len(data[i])), p=prob[i])
+			ans.append(data[i][randInd])
 		else:
 			randInd = random.randint(0,len(data[i])-1)
 			ans.append(data[i][randInd])
