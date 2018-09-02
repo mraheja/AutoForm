@@ -16,14 +16,14 @@ Open the config.txt file and edit the parameters to your desire.
 
 ### Format
 
-URL = [URL OF YOUR FORM] (make sure that it ends with viewform)
-RESPONSES = [NUMBER OF RESPONSES] 
-TIME = [TIME IN MINUTES OVER WHICH THE SUBMISSIONS WILL BE DONE] (0 submits one after another)
+URL = [URL OF YOUR FORM] (make sure that it ends with viewform) <br>
+RESPONSES = [NUMBER OF RESPONSES] <br>
+TIME = [TIME IN MINUTES OVER WHICH THE SUBMISSIONS WILL BE DONE] (0 submits one after another)<br>
 
-Q#: [RANDOM OR SEQUENTIAL]
+Q#: [RANDOM OR SEQUENTIAL] <br>
 Responses
 
-Q#: [RANDOM OR SEQUENTIAL]
+Q#: [RANDOM OR SEQUENTIAL] <br>
 Responses
 
 ...
